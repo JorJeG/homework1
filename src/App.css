@@ -1,0 +1,295 @@
+.root__inner {
+  max-width: 704px;
+  margin: 45px auto;
+}
+
+.logo {
+  box-sizing: border-box;
+  width: 90px;
+  height: 30px;
+  margin-bottom: 45px;
+}
+
+.layout {
+  margin: 0 auto;
+  display: grid;
+  max-width: 704px;
+  grid-template-columns: repeat(6, calc(704/6));
+  grid-template-rows: auto;
+  grid-gap: 30px 16px;
+  grid-auto-flow: dense;
+  justify-content: center;
+}
+
+.item {
+  grid-row: span 1;
+}
+
+.item_size_s {
+/*   background-color: #00f; */
+  grid-column: span 2;
+}
+
+@media screen and (max-width: 500px) {
+  .item_size_s {
+    grid-column: span 3;
+  }
+}
+
+.item_size_m {
+/*   background-color: #0f0; */
+  grid-column: span 3;
+}
+
+.item_size_l {
+/*   background-color: #f00; */
+  grid-column: span 6;
+}
+
+@media screen and (max-width: 400px) {
+  .item_size_s {
+    grid-column: span 6;
+  }
+  
+  .item_size_m {
+    grid-column: span 6;
+  }
+}
+
+/* cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+/*   border: 1px solid black; */
+  overflow: hidden;
+/*   margin-bottom: 30px; */
+}
+
+.card_size_s {
+  box-sizing: border-box;
+  height: 232px;
+}
+
+.card_size_m {
+  height: 305px;
+  justify-content: space-between;
+}
+
+.card_size_l {
+  box-sizing: border-box;
+  height: 243px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 703px) {
+  .card_size_l {
+    height: 305px;
+    justify-content: space-between;
+    padding-bottom: 0;
+  }
+}
+
+.card__title {
+  margin: 0;
+  background-color: #fff;
+  font-family: "YS Text";
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.card__title_size_s {
+  font-size: 1rem;
+  line-height: 22px;
+}
+
+.card__title_size_m {
+  font-size: 1.2rem;
+  line-height: 24px;
+}
+
+.card__title_size_l {
+  width: calc(35% - 16px);
+  margin-left: auto;
+  font-size: 1.2rem;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 703px) {
+  .card__title_size_l {
+    width: 100%;
+  }
+}
+
+/* @media screen and (min-width: 704px) {
+  .card__title_size_s {
+    font-size: 17px;
+  }
+  
+  .card__desc_size_m,
+  .card__desc_size_l {
+    font-size: 19px;
+  }
+} */
+
+.card__img {
+  display: block;
+}
+
+.card__img_size_s {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  z-index: -1;
+}
+
+.card__img_size_m {
+  position: absolute;
+  bottom: 70px;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  z-index: -1;
+}
+
+.card__img_size_l {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 65%;
+  height: 243px;
+  margin-right: 16px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 703px) {
+  .card__img_size_l {
+    position: absolute;
+    top: auto;
+    bottom: 70px;
+    left: 0;
+    width: 100%;
+    margin-right: 0;
+    z-index: -1;
+  }
+}
+
+.card__desc {
+  margin: 0;
+  padding: 0;
+  font-family: "YS Text";
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+  background-color: #fff;
+  line-height: 20px;
+  overflow: hidden;
+}
+
+.card__desc_size_s {
+  margin-top: 8px;
+  margin-bottom: 44px;
+}
+
+.card__desc_size_m {
+  max-height: 60px;
+  width: 90%;
+  margin-right: auto;
+}
+
+.card__desc_size_l {
+  max-height: 160px;
+  width: calc(35% - 16px);
+  margin-left: auto;
+}
+
+@media screen and (max-width: 703px) {
+  .card__desc {
+    font-size: 12px;
+  }
+  
+  .card__desc_size_l {
+    max-height: 60px;
+    width: 90%;
+    margin: 0;
+    margin-right: auto;
+  }
+}
+
+.card__option {
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+}
+
+.card__option_size_s {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+.card__option_size_m {
+  position: absolute;
+  bottom: 40px;
+  right: -5px;
+}
+
+.card__option_size_l {
+  position: absolute;
+  bottom: 5px;
+  right: calc(35% - 50px);
+}
+
+@media screen and (max-width: 703px) {
+  .card__option_size_l {
+    position: absolute;
+    bottom: 40px;
+    right: -5px;
+  }
+}
+
+.card__option_image_none {
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+}
+
+.card__option .circle {
+  fill: #D8D8D8;
+}
+
+.card__option:hover .circle {
+  fill: #000;
+}
+
+.card__like {
+  position: absolute;
+  width: 17px;
+  height: 16px;
+}
+
+.card__like_size_s {
+  bottom: 12px;
+  right: 13px;
+}
+
+.card__like_size_m {
+  bottom: 5px;
+  right: 3px;
+}
+
+.card__like_size_l {
+  bottom: 5px;
+  right: 5px;
+}
+
+.card__like .heart {
+  fill: #D8D8D8;
+}
+
+.card__like:hover .heart {
+  fill: #000;
+}
