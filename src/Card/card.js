@@ -9,8 +9,13 @@ const Card = (props) => {
 		classOption = `card__option card__option_size_${props.size}`;
 	}
 	return(
-		<section className={`item item_size_${props.size} card card_size_${props.size}`}>
-			<h2 style={{color: props.titleColor}} className={`card__title card__title_size_${props.size}`}>{props.title}</h2>
+		<section
+			className={`item item_size_${props.size} card card_size_${props.size}`}>
+			<h2 
+				style={{color: props.titleColor}}
+				className={`card__title card__title_size_${props.size}`}>
+				{props.title}
+			</h2>
 			{props.image &&
 				<img
 					className={`card__img card__img_size_${props.size}`}
@@ -18,7 +23,14 @@ const Card = (props) => {
 					src={props.image} />
 			}
 			{props.description &&
-				<p className={`card__desc card__desc_size_${props.size}`}>{props.description}</p>
+				<p className={`card__desc card__desc_size_${props.size}`}>
+					{props.description}
+				</p>
+			}
+			{props.channelName &&
+				<p className="card__channel">
+					{props.channelName}
+				</p>
 			}
 			<div className={classOption}>
 				<svg width="14" height="4">
