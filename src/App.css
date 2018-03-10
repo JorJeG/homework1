@@ -1,6 +1,7 @@
 .root__inner {
   max-width: 704px;
   margin: 45px auto;
+  padding: 0 8px;
 }
 
 .logo {
@@ -30,7 +31,7 @@
   grid-column: span 2;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   .item_size_s {
     grid-column: span 3;
   }
@@ -80,14 +81,12 @@
 .card_size_l {
   box-sizing: border-box;
   height: 243px;
-  padding-bottom: 30px;
 }
 
 @media screen and (max-width: 703px) {
   .card_size_l {
     height: 305px;
     justify-content: space-between;
-    padding-bottom: 0;
   }
 }
 
@@ -111,6 +110,7 @@
 
 .card__title_size_l {
   width: calc(35% - 16px);
+  max-height: 48px;
   margin-left: auto;
   font-size: 1.2rem;
   line-height: 24px;
@@ -190,8 +190,9 @@
 }
 
 .card__desc_size_s {
-  margin-top: 8px;
-  margin-bottom: 44px;
+  box-sizing: border-box;
+  max-height: 160px;
+  margin-bottom: 16px;
 }
 
 .card__desc_size_m {
@@ -203,7 +204,15 @@
 .card__desc_size_l {
   max-height: 160px;
   width: calc(35% - 16px);
+  margin-bottom: 36px;
   margin-left: auto;
+}
+
+.card__channel {
+  margin-top: 0;
+  font-size: 14px;
+  font-family: "YS Text";
+  font-weight: bold;
 }
 
 @media screen and (max-width: 703px) {

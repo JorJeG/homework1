@@ -18,7 +18,14 @@ const Card = (props) => {
 					src={props.image} />
 			}
 			{props.description &&
-				<p className={`card__desc card__desc_size_${props.size}`}>{props.description}</p>
+				<p className={`card__desc card__desc_size_${props.size}`}>
+					{props.description}
+				</p>
+			}
+			{props.channelName &&
+				<p className="card__channel">
+					{props.channelName}
+				</p>
 			}
 			<div className={classOption}>
 				<svg width="14" height="4">
