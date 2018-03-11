@@ -1,4 +1,5 @@
 import React from 'react';
+import srcSetImg from '../helpers/srcSetImg.js';
 import srcImg from '../helpers/srcImg.js';
 
 const Card = (props) => {
@@ -19,8 +20,8 @@ const Card = (props) => {
 			{props.image &&
 				<img
 					className={`card__img card__img_size_${props.size}`}
-					srcSet={srcImg(props.image)}
-					src={props.image} />
+					srcSet={srcSetImg(props.image)}
+					src={srcImg(props.image)} />
 			}
 			{props.description &&
 				<p className={`card__desc card__desc_size_${props.size}`}>
