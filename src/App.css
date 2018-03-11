@@ -45,7 +45,7 @@
   grid-column: span 6;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 425px) {
   .item_size_s {
     grid-column: span 6;
   }
@@ -98,6 +98,7 @@
 .card__title_size_s {
   font-size: 16px;
   line-height: 22px;
+  min-height: 44px;
   max-height: 66px;
 }
 
