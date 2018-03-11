@@ -45,7 +45,7 @@
   grid-column: span 6;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 424px) {
   .item_size_s {
     grid-column: span 6;
   }
@@ -77,6 +77,12 @@
 .card_size_l {
   box-sizing: border-box;
   height: 243px;
+}
+
+@media screen and (max-width: 424px) {
+  .card_size_s {
+    height: 300px;
+  }
 }
 
 @media screen and (max-width: 703px) {
@@ -115,7 +121,7 @@
   line-height: 24px;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 424px) {
   .card__title_size_s {
     min-height: 22px;
   }
@@ -160,7 +166,7 @@
   z-index: -1;
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 424px) {
   .card__img_size_s {
     max-height: auto;
   }
