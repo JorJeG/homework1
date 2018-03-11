@@ -21,7 +21,8 @@ const Card = (props) => {
 				<img
 					className={`card__img card__img_size_${props.size}`}
 					srcSet={srcSetImg(props.image)}
-					src={srcImg(props.image)} />
+					src={srcImg(props.image)}
+					alt={props.title} />
 			}
 			{props.description &&
 				<p className={`card__desc card__desc_size_${props.size}`}>
@@ -33,18 +34,22 @@ const Card = (props) => {
 					{props.channelName}
 				</p>
 			}
-			<div className={classOption}>
+			<a
+				className={classOption}
+				href="javascript:void(0)">
 				<svg width="14" height="4">
 					<circle className="circle" r="2" cx="2" cy="2" />
 					<circle className="circle" r="2" cx="7" cy="2" />
 					<circle className="circle" r="2" cx="12" cy="2" />
 				</svg>
-			</div>
-			<div className={`card__like card__like_size_${props.size}`}>
+			</a>
+			<a
+				className={`card__like card__like_size_${props.size}`}
+				href="javascript:void(0)">
 				<svg width="17" height="16">
 					<path className="heart" d="M8 3.2C7.4-0.3 3.2-0.8 1.4 1 -0.5 2.9-0.5 5.8 1.4 7.7 1.9 8.2 6.9 13 6.9 13 7.4 13.6 8.5 13.6 9 13L14.5 7.7C16.5 5.8 16.5 2.9 14.6 1 12.8-0.7 8.6-0.3 8 3.2Z"></path>
 				</svg>
-			</div>
+			</a>
 		</article>
 	)
 }

@@ -12,7 +12,8 @@ class App extends Component {
         <img
           srcSet={srcImg("img/zen_logo.png")}
           className="logo"
-          src="img/zen_logo.png" />
+          src="img/zen_logo.png"
+          alt="Zen logo" />
         <div className="layout">
           {arrayList}
         </div>
