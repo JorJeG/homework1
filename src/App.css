@@ -271,7 +271,8 @@
   fill: #D8D8D8;
 }
 
-.card__option:hover .circle {
+.card__option:hover .circle,
+.card__option:active .circle {
   fill: #000;
 }
 
@@ -300,6 +301,7 @@
   fill: #D8D8D8;
 }
 
-.card__like:hover .heart {
+.card__like:hover .heart,
+.card__like:active .heart {
   fill: #000;
 }
